@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sora: "Sora", sans-serif;
+  --font-code: "Source Code Pro", monospace;
+  --font-grotesk: "Space Grotesk", sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-n-8 text-n-1 text-base;
+  }
+}
+
+.rotate-45 {
+  @apply rotate-[45deg]
+}
+
+.rotate-90 {
+  @apply rotate-[90deg]
+}
+
+.rotate-135 {
+  @apply rotate-[135deg]
+}
+
+.rotate-180 {
+  @apply rotate-[180deg]
+}
+
+.rotate-225 {
+  @apply rotate-[225deg]
+}
+
+.rotate-270 {
+  @apply rotate-[270deg]
+}
+
+.rotate-315 {
+  @apply rotate-[315deg]
+}
+
+.rotate-360 {
+  @apply rotate-[360deg]
+}
+
+.-rotate-45 {
+  @apply rotate-[-45deg]
+}
+
+.-rotate-90 {
+  @apply rotate-[-90deg]
+}
+
+.-rotate-135 {
+  @apply rotate-[-135deg]
+}
+
+.-rotate-180 {
+  @apply rotate-[-180deg]
+}
+
+.-rotate-225 {
+  @apply rotate-[-225deg]
+}
+
+.-rotate-270 {
+  @apply rotate-[-270deg]
+}
+
+.-rotate-315 {
+  @apply rotate-[-315deg]
+}
+
+.-rotate-360 {
+  @apply rotate-[-360deg]
+}
+
+
+
+
+
+
+
+
+
+
+/* Style global de la frise chronologique */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #111; /* Fond noir */
+  padding: 50px 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.5); /* Ombre floue */
+  backdrop-filter: blur(8px); /* Flou pour un effet futuriste */
+}
+
+/* Conteneur principal de la frise */
+.timeline-container {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Style des items de la frise */
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7); /* Fond sombre semi-transparent */
+  backdrop-filter: blur(5px); /* Flou subtil */
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  background: rgba(255, 255, 255, 0.1); /* Fond léger au survol */
+  transform: scale(1.05); /* Légère mise en valeur au survol */
+}
+
+/* Style pour la date circulaire */
+.timeline-date {
+  background: #2a3d67; /* Bleu foncé */
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -40px; /* Décalage sur la gauche */
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Ombre subtile */
+  transition: all 0.3s ease;
+}
+
+/* Légère animation au survol de la date */
+.timeline-item:hover .timeline-date {
+  transform: translateY(-50%) scale(1.1); /* Effet de zoom sur la date */
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Style du contenu de chaque item de la frise */
+.timeline-content {
+  margin-left: 80px;
+  background: rgba(22, 22, 22, 0.8); /* Fond sombre pour les contenus */
+  padding: 20px;
+  border-radius: 15px;
+  width: 75%;
+  color: #dcdcdc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Animation au survol du contenu */
+.timeline-item:hover .timeline-content {
+  background: rgba(255, 255, 255, 0.05); /* Fond plus clair au survol */
+  transform: translateX(10px); /* Légère profondeur */
+}
+
+/* Effet de texte au survol */
+.timeline-content h4 {
+  font-size: 22px;
+  color: #4e6e92; /* Bleu-gris subtil */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Effet de texte de description */
+.timeline-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #b0c4de;
+}
+
+/* Style général pour les titres de la frise */
+h3 {
+  color: #00bcd4; /* Bleu clair pour le titre */
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Personnalisation de la timeline pour les dates impaires et paires */
+.timeline-item:nth-child(odd) .timeline-content {
+  background: rgba(34, 40, 49, 0.85); /* Fond plus sombre pour les dates impaires */
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  background: rgba(20, 26, 34, 0.85); /* Fond légèrement plus clair pour les dates paires */
+}
+
+
+
+
+
+
+
