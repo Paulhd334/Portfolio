@@ -1,0 +1,38 @@
+cd C:\brainwave-main
+
+npm start
+
+npm build
+
+
+
+
+
+
+
+
+
+
+
+
+site futuriste sans faire expret
+
+
+            <div className="flex justify-center mt-6">
+  <button className="relative px-8 py-3 text-lg font-bold text-white uppercase transition-all duration-300 bg-gradient-to-r from-indigo-600 to-violet-700 rounded-lg shadow-lg hover:from-violet-700 hover:to-purple-800 hover:scale-105 hover:shadow-indigo-500/50 focus:outline-none animate-gradient flex items-center justify-center">
+    <span className="relative z-10">En savoir plus</span>
+    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-indigo-600 to-violet-700 rounded-lg opacity-20 blur-lg"></span>
+  </button>
+</div>
+
+
+            <p className="mt-12 text-4xl font-bold text-center text-gray-300">À propos du stage</p>
+            <div className="flex justify-center mt-6">
+          
+
+
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-indigo-600 to-violet-700 rounded-lg opacity-20 blur-lg"></span>
+        
+            </div>
+          </div>
+        </div>

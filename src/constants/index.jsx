@@ -1,3 +1,14 @@
+import reactLogo from "../assets/react.svg";
+import cssLogo from "../assets/css3.svg";
+import javascriptLogo from "../assets/javascript.png";
+import html5Logo from "../assets/html.png";
+import php7Logo from "../assets/php7.png"
+
+import '../index.css';
+
+import React from 'react';
+
+
 import {
   benefitIcon1,
   benefitIcon2,
@@ -34,23 +45,25 @@ import {
   telegram,
   twitter,
   yourlogo,
+
+
 } from "../assets";
 
 export const navigation = [
   {
     id: "0",
-    title: "A Propos de moi",
-    url: "#features",
+    title: "Home",
+    url: "#hero",
   },
   {
     id: "1",
-    title: "Pricing",
+    title: "Profil",
     url: "#pricing",
   },
   {
     id: "2",
-    title: "How to use",
-    url: "#how-to-use",
+    title: "Projects",
+    url: "#projects",
   },
   {
     id: "3",
@@ -71,11 +84,24 @@ export const navigation = [
   },
 ];
 
+
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
+export const companyLogos = [html5Logo, cssLogo, javascriptLogo, php7Logo, reactLogo];
+
+
+
+<div className="tech-logos">
+  {companyLogos.map((logo, index) => (
+    <div key={index} className="tech-logo">
+      <img src={logo} alt={`Logo ${index}`} />
+    </div>
+  ))}
+</div>
+
+
 
 export const brainwaveServices = [
   "Photo generating",
