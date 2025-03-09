@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Portfolio/', // Utilise le sous-dossier pour GitHub Pages (ajuste si nécessaire)
+  base: '/Portfolio/',  // Indique que ton site sera hébergé dans le sous-dossier 'Portfolio'
 })
