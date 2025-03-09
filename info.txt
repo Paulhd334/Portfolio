@@ -6,7 +6,7 @@ npm build
 
 
 
-
+git push origin gh-pages  
 
 
 
